@@ -3,7 +3,7 @@
 Find this app deployed on vercel below
 
 ```
-https://mean-starter.arthiaw.com/
+[MEAN STARTER DEMO](https://mean-starter.arthiaw.com/)
 ```
 
 ## NOTE
