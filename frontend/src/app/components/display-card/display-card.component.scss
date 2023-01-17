@@ -1,0 +1,38 @@
+.display-card-container{
+    width: 100%;
+    height: 50px;
+    padding: 1px;
+}
+.display-card{
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    .display-card-task{
+        background-color: var(--white-c);
+        border: 1px solid var(--black-c);
+        border-radius: 10px;
+
+        &.done{
+            text-decoration: line-through;
+        }
+    }
+    button{
+        background-color: var(--black-c);
+        color: var(--white-c);
+        width: 100%;
+        height: 100%;
+        border: none;
+        scale: 0.9;
+        transition: 0.4s;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            transition: 0.4s;
+            scale: 1;
+        }
+    }
+    &.done{
+        button{
+            grid-column: 2 / span 2;
+        }
+    }
+}

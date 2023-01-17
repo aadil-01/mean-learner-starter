@@ -1,0 +1,8 @@
+<div class="display-card-container">
+    <div *ngIf="loading" class="occupy center">processing...</div>
+    <div class="display-card occupy" [ngClass]="{' done':cardData.status}" *ngIf="!loading">
+        <span class="display-card-task occupy center" [ngClass]="{' done':cardData.status}">{{cardData.task}}</span>
+        <button *ngIf="!cardData.status" (click)="onDone()">Done</button>
+        <button (click)="onDelete()">Delete</button>
+    </div>
+</div>

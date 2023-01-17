@@ -1,0 +1,8 @@
+<div class="display-outer-container occupy">
+    <div class="display-inner-container occupy">
+        <div class="occupy center" *ngIf="loading">Loading...</div>
+        <app-display-card (stateChanged)="stateChanged($event)" 
+            *ngFor="let data of displayData" [cardData]="data"></app-display-card>
+    </div>
+    <app-form></app-form>
+</div>
