@@ -9,7 +9,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
 public class MongoDB {
-    ConnectionString connectionString = new ConnectionString("mongodb+srv://aadilshaik:rQ8zpSxOVP9dE23M@cluster0.p5ejfec.mongodb.net/?retryWrites=true&w=majority");
+    ConnectionString connectionString = new ConnectionString("mongodb+srv://@cluster0.p5ejfec.mongodb.net/?retryWrites=true&w=majority");
     MongoClientSettings settings = MongoClientSettings.builder()
         .applyConnectionString(connectionString)
         .serverApi(ServerApi.builder().version(ServerApiVersion.V1).build())
