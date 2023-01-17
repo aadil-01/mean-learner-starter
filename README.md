@@ -2,7 +2,7 @@
 
 Find this app deployed on vercel below
 
-[a link](https://mean-starter.arthiaw.com/)
+[Demo](https://mean-starter.arthiaw.com/)
 
 
 ## NOTE
