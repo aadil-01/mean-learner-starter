@@ -30,3 +30,5 @@ const PORT = 3000
 app.listen(PORT, () => {
     console.log(`Node api started on port : ${PORT}`)
 })
+
+module.exports = app
