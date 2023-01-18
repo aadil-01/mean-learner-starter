@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
+    "title": "Learner Node Api",
     "description": ""
   },
   "host": "localhost:3000",

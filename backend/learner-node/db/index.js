@@ -1,9 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose')
-const { DB_URL } = require('./config.json');
 
 //to connect to db
 const initDB = () => {
-    mongoose.connect(DB_URL);
+    mongoose.connect(process.env.DB_URL);
     const database = mongoose.connection;
 
     database.on('error', (error) => {

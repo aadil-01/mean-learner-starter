@@ -22,6 +22,13 @@ npm run start:local
 ```
 npm run swagger-autogen
 ```
+
+## To view swagger docs
+
+```
+http://localhost:3000/api-docs
+```
+
 ## Build
 
 > To build the server use
