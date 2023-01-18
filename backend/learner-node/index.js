@@ -8,7 +8,7 @@ const { version } = require("./package.json");
 
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 
 // To enable cors
 app.use(cors({ origin: '*', methods: "GET,POST,PATCH,DELETE" }));
