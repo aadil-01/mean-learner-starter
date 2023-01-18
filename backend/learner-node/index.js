@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const { initDB } = require("./db/index");
 const routes = require('./routes/routes.js');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger/swagger_output.json');
 const { version } = require("./package.json");
 
 const app = express();
@@ -23,6 +25,9 @@ app.get('/', (req, res) => {
 
 //to use routes
 app.use(routes);
+
+//to use swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 const PORT = 3000
 
