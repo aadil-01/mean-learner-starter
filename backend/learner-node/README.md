@@ -11,11 +11,23 @@ npm install
 
 ## App Run
 
-> Run the server using below command
+> Run the server in local using below command
 ```
-npm start
+npm run start:local
 ```
 
+## App generate swagger docs
+
+> This will auto generate swagger docs and start server
+```
+npm run swagger-autogen
+```
+## Build
+
+> To build the server use
+```
+npm run build
+```
 ## NOTE
 > Better create your own Mongo DB account and change the url in db/config.json with your mongo db atlas url
 > And also create Vercel account if you want to deploy this app. Just create your own repo with this code and connect this with your vercel account. It will deploy automatically after every push.
