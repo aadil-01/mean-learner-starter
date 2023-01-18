@@ -15,6 +15,9 @@ app.use(cors({ origin: '*', methods: "GET,POST,PATCH,DELETE" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//to use swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
 //init mongo db
 initDB();
 
@@ -25,9 +28,6 @@ app.get('/', (req, res) => {
 
 //to use routes
 app.use(routes);
-
-//to use swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 const PORT = 3000
 
