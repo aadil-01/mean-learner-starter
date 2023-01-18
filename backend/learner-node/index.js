@@ -1,6 +1,4 @@
 const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const { initDB } = require("./db/index");
 const routes = require('./routes/routes.js');
@@ -9,14 +7,6 @@ const swaggerFile = require('./swagger/swagger_output.json');
 const { version } = require("./package.json");
 
 const app = express();
-
-const ROOT_FOLDER = path.join(__dirname, '..');
-const SRC_FOLDER = path.join(ROOT_FOLDER, 'src');
-
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
 
 // To enable cors
 app.use(cors({ origin: '*', methods: "GET,POST,PATCH,DELETE" }));
@@ -36,13 +26,8 @@ app.get('/', (req, res) => {
 //to use routes
 app.use(routes);
 
-
-const options = { customCssUrl: '/public/swagger-ui.css', customSiteTitle: "The Words That I Know API - Swagger" };
-
-app.use('/public', express.static(path.join(SRC_FOLDER, 'public')));
-
 //to use swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile, options))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 const PORT = 3000
 
