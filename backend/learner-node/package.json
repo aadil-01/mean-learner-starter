@@ -12,10 +12,12 @@
   "author": "Aadil Shaik",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^6.8.3",
     "nodemon": "^2.0.20",
+    "path": "^0.12.7",
     "swagger-autogen": "^2.22.0",
     "swagger-ui-express": "^4.6.0"
   }
