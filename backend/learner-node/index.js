@@ -4,7 +4,7 @@ const { initDB } = require("./db/index");
 const routes = require('./routes/routes.js');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger/swagger_output.json');
-const { version } = require("./package.json"); 
+const { version } = require("./package.json");
 
 const app = express();
 
