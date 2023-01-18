@@ -1,4 +1,3 @@
-import path from 'path';
 const express = require("express");
 const cors = require("cors");
 const { initDB } = require("./db/index");
@@ -9,8 +8,7 @@ const { version } = require("./package.json");
 
 const app = express();
 
-const ROOT_FOLDER = path.join(__dirname, '..');
-const SRC_FOLDER = path.join(ROOT_FOLDER, 'src');
+app.use(express.static(__dirname + '/public'));
 
 // To enable cors
 app.use(cors({ origin: '*', methods: "GET,POST,PATCH,DELETE" }));
@@ -31,11 +29,10 @@ app.get('/', (req, res) => {
 app.use(routes);
 
 
-const options = { customCssUrl: '/public/swagger-ui.css', customSiteTitle: "The Words That I Know API - Swagger" };
-app.use('/public', express.static(path.join(SRC_FOLDER, 'public')));
+//const options = { customCssUrl: '/public/swagger-ui.css', customSiteTitle: "The Words That I Know API - Swagger" };
 
 //to use swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile,options))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 const PORT = 3000
 
