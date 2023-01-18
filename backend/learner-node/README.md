@@ -13,7 +13,7 @@ npm install
 
 > Run the server in local using below command
 ```
-npm run start:local
+npm run start
 ```
 
 ## App generate swagger docs
