@@ -9,7 +9,7 @@ const { version } = require("./package.json");
 const app = express();
 
 // To enable cors
-app.use(cors({ origin: true, methods: "GET,POST,PATCH,DELETE" }));
+app.use(cors({ origin: '*', methods: "GET,POST,PATCH,DELETE" }));
 
 // To enable request body input
 app.use(express.json());
