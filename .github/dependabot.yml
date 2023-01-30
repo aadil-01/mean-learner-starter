@@ -10,6 +10,6 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/backend/learned-node" # Location of package manifests
+    directory: "/backend/learner-node" # Location of package manifests
     schedule:
       interval: "weekly"
