@@ -18,7 +18,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.9.0",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.21",
     "swagger-autogen": "^2.23.0",
     "swagger-ui-dist": "^4.15.5",
     "swagger-ui-express": "^4.6.0",
